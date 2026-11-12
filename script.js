@@ -1,5 +1,5 @@
 // Insert your Cloudflare Worker URL after deployment.
-const WORKER_URL = "YOUR_CLOUDFLARE_WORKER_URL";
+const WORKER_URL = "https://summer-star-a341.ac7248a.workers.dev/";
 
 const form = document.getElementById("chat-form");
 const input = document.getElementById("user-input");
