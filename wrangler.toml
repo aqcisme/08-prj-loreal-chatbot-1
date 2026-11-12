@@ -1,0 +1,6 @@
+name = "loreal-beauty-assistant"
+main = "RESOURCE_cloudflare-worker.js"
+compatibility_date = "2026-11-10"
+
+[observability]
+enabled = true

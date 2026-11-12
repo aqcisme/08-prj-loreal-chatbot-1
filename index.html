@@ -1,64 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat Assistant</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Oréal Beauty Assistant</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#">
+  <img src="img/loreal-logo.png" alt="L'Oréal Paris" class="logo-image">
+</a>
+      <span class="header-note">BEAUTY TECH · PERSONALIZED DISCOVERY</span>
+    </header>
 
-  <body>
-    <div class="page-wrapper">
-      <!------- Header / Branding ------->
-      <header class="site-header">
-        <h1 class="site-title">Smart Product Advisor</h1>
-      </header>
+    <main class="main-content">
+      <section class="intro">
+        <p class="eyebrow">YOUR PERSONAL BEAUTY ASSISTANT</p>
+        <h1>Because you're <em>worth it.</em></h1>
+        <p class="intro-copy">
+          Explore L'Oréal beauty, discover products that fit your needs,
+          and build a routine that feels like you.
+        </p>
+      </section>
 
-      <!------- Chat Area ------->
-      <main>
-        <section class="chatbox">
-          <div id="chatWindow" class="chat-window">
-            <!-- messages will be appended here via JS -->
+      <section class="chat-card">
+        <div class="chat-topbar">
+          <div class="assistant-identity">
+            <div class="assistant-avatar">L</div>
+            <div>
+              <div class="assistant-name">L'Oréal Beauty Assistant</div>
+              <div class="assistant-status">● HERE TO HELP YOU GLOW</div>
+            </div>
           </div>
+          <span class="powered-label">AI BEAUTY GUIDE</span>
+        </div>
 
-          <form id="chatForm" class="chat-form">
-            <label for="userInput" class="visually-hidden">Message</label>
-            <input
-              id="userInput"
-              name="userInput"
-              type="text"
-              placeholder="Ask me about products or routines…"
-              autocomplete="off"
-              required
-            />
-            <button type="submit" id="sendBtn">
-              <span class="material-icons">send</span>
-              <span class="visually-hidden">Send</span>
-            </button>
-          </form>
-        </section>
-      </main>
+        <div id="chat-messages" class="chat-messages" aria-live="polite">
+          <article class="message assistant-message">
+            <div class="message-avatar">L</div>
+            <div class="message-content">
+              <div class="message-label">L'ORÉAL BEAUTY ASSISTANT</div>
+              <div class="bubble">
+                Hi! Welcome. ✨ I'm here to help you discover L'Oréal products
+                and create a beauty routine that works for you.
+                Are you interested in skincare, makeup, haircare, or fragrance?
+              </div>
+            </div>
+          </article>
+        </div>
 
-      <!------- Footer Links ------->
-      <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
-        <nav>
-          <!-- These URLs are placeholders -->
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
-        </nav>
-      </footer>
-    </div>
+        <div class="suggestions">
+          <button class="suggestion-chip" data-prompt="Help me build a simple morning skincare routine.">
+            Build a skincare routine
+          </button>
+          <button class="suggestion-chip" data-prompt="I want a natural everyday makeup look. What L'Oréal products should I explore?">
+            Everyday makeup
+          </button>
+          <button class="suggestion-chip" data-prompt="How can I care for dry, frizzy hair with L'Oréal products?">
+            Haircare for dry hair
+          </button>
+        </div>
 
-    <script src="script.js"></script>
-  </body>
+        <form id="chat-form" class="chat-form">
+          <input
+            id="user-input"
+            type="text"
+            placeholder="Ask me about your beauty routine..."
+            maxlength="1200"
+            required
+          >
+          <button id="send-button" type="submit">Send ↗</button>
+        </form>
+
+        <p class="privacy-note">
+          Beauty advice, made personal. For medical or persistent skin concerns,
+          consult a qualified professional.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>L'ORÉAL PARIS</span>
+      <span>BEAUTY FOR EVERYONE, EVERY DAY.</span>
+    </footer>
+  </div>
+</body>
 </html>
